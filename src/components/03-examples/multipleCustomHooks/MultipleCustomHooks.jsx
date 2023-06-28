@@ -9,13 +9,13 @@ export const MultipleCustomHooks = () => {
     const {counter, increment } = useCounter(1)
     const {data, isLoading} = useFetch(`https://rickandmortyapi.com/api/character/${counter}`)
     
-    
+    const {image, name} = data || {};
   return (
     <>
         
         {
             isLoading ? (<TitleAndLoading/>):(<>
-            <BLockQuoteLoaded image={data?.image} name={data?.name}/>
+            <BLockQuoteLoaded image={image} name={name}/>
             <Button action={increment} text={"next character"}/>
             </>    
             )
