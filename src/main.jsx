@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { CallBackHook } from './components/06-memo/CallBackHook';
-import "./components/08-useReducer/intro-Reducer"
-import { TodoApp } from './components/08-useReducer/TodoApp';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/08-useReducer/intro-Reducer";
+import { MultipleCustomHooks } from "./components/03-examples/multipleCustomHooks/MultipleCustomHooks";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <TodoApp/>
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <MultipleCustomHooks />
+  </BrowserRouter>
+);

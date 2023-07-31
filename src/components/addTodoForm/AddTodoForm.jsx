@@ -8,6 +8,7 @@ export const AddTodoForm = ({addNewTodo}) => {
 
 const onFormSubmit = (event) => {
   event.preventDefault()
+  if(description === "")return
   const newTodo = {
       id: new Date().getTime(),
       description,
